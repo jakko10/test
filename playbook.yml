@@ -1,8 +1,6 @@
----
-- name: Run whoami
-  ansible.builtin.command: whoami
-  register: whoami_output
-
-- name: Print whoami output
-  ansible.builtin.debug:
-    msg: "{{ whoami_output.stdout }}"
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
