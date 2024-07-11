@@ -1,0 +1,8 @@
+---
+- name: Run whoami
+  ansible.builtin.command: whoami
+  register: whoami_output
+
+- name: Print whoami output
+  ansible.builtin.debug:
+    msg: "{{ whoami_output.stdout }}"
